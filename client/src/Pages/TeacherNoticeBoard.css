@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap');
+
+.noticeboard-container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #f0f7f4 0%, #e0ece7 100%); /* New subtle green */
+}
+
+.noticeboard-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.noticeboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 1.5rem;
+    color: #2c3e50;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.noticeboard-header-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.noticeboard-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Replace the .noticeboard-logo class with this: */
+.noticeboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c704d;
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+/* Remove the box-shadow and background from the icon */
+
+.noticeboard-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.noticeboard-card {
+    border-top: 4px solid #2c704d;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.submit-button:hover {
+    background-color: #235c3f;
+    box-shadow: 0 2px 8px rgba(44, 112, 77, 0.2); /* Subtle depth */
+}
+
+.noticeboard-header {
+    border-bottom: 1px solid #d4e8e0; /* Light green divider */
+}
+.noticeboard-form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c704d;
+    text-align: center;
+}
+
+.noticeboard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.noticeboard-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #2c3e50;
+    resize: vertical;
+    min-height: 200px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.noticeboard-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.noticeboard-textarea:focus {
+    border-color: #2c704d;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 112, 77, 0.2);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2c704d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submit-button:hover {
+    background-color: #235c3f;
+}
+
+.submit-button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Loading spinner */
+.spinner {
+    animation: rotate 2s linear infinite;
+    width: 20px;
+    height: 20px;
+}
+  
+.spinner .path {
+    stroke: white;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+  
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .noticeboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 0;
+    }
+
+    .noticeboard-title {
+        font-size: 1.8rem;
+    }
+
+    .noticeboard-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .noticeboard-container {
+        padding: 1rem;
+    }
+
+    .noticeboard-title {
+        font-size: 1.6rem;
+    }
+
+    .noticeboard-form-title {
+        font-size: 1.3rem;
+    }
+}

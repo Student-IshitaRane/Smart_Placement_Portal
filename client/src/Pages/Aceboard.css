@@ -1,0 +1,393 @@
+/* Aceboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap');
+
+.aceboard-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.aceboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.aceboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background: #D9D2FF;
+  color: #1F2937;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.aceboard-header-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.aceboard-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aceboard-logo {
+  background: white;
+  color: #896BFF;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aceboard-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.aceboard-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 120px;
+  backdrop-filter: blur(4px);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 0.25rem;
+}
+
+.search-controls {
+  padding: 1.5rem 2rem;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.search-container {
+  position: relative;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: white;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  border-color: #896BFF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(137, 107, 255, 0.2);
+}
+
+.table-wrapper {
+  padding: 0 2rem 2rem;
+}
+
+.leaderboard-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.leaderboard-table th {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.leaderboard-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.leaderboard-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.95rem;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.user-row:hover {
+  background-color: #f9fafb;
+}
+
+/* Rank column */
+.rank-header {
+  width: 80px;
+  text-align: center !important;
+}
+
+.rank-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.rank-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--card-accent);
+  color: white;
+  padding: 0.5rem 2.0rem; /* Adjust padding for wider rectangle */
+  border-radius: 30px; /* Rounded corners for rectangle */
+  font-size: 1rem; /* Adjust font size to make the text bigger */
+  font-weight: 600;
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.medal {
+  font-size: 1.2rem;
+}
+
+.medal-1 {
+  color: #FFD700;
+}
+
+.medal-2 {
+  color: #C0C0C0;
+}
+
+.medal-3 {
+  color: #CD7F32;
+}
+
+/* Name column */
+.name-header {
+  min-width: 200px;
+}
+
+.name-cell {
+  font-weight: 500;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.verified-badge {
+  color: #10B981;
+  width: 18px;
+  height: 18px;
+}
+
+/* Score column */
+.score-header {
+  min-width: 120px;
+}
+
+.score-cell {
+  min-width: 150px;
+}
+
+.score-value {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #896BFF;
+  border-radius: 3px;
+}
+
+/* Year column */
+.year-cell {
+  white-space: nowrap;
+  color: #6b7280;
+}
+
+/* Branch column */
+.branch-cell {
+  white-space: nowrap;
+}
+
+/* CGPA column */
+.cgpa-cell {
+  text-align: right;
+}
+
+.cgpa-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Top rank styling */
+.top-1 .rank-badge {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.top-2 .rank-badge {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+.top-3 .rank-badge {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+/* Empty state */
+.empty-state {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.empty-state p {
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aceboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .aceboard-title {
+    font-size: 1.8rem;
+  }
+
+  .aceboard-stats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .stat-card {
+    padding: 0.75rem 1rem;
+    min-width: 100px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .search-controls, .table-wrapper {
+    padding: 1rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .aceboard-container {
+    padding: 1rem 0;
+  }
+
+  .aceboard-content {
+    border-radius: 0;
+  }
+
+  .year-cell, .branch-cell {
+    display: none;
+  }
+}

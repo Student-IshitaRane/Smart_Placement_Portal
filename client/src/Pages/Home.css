@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@700&display=swap');
+
+:root {
+  --primary-color: #4F46E5;
+  --text-color: #1F2937;
+  --text-light: #363940;
+  --border-radius: 12px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+  background: #F9FAFB;
+}
+
+.home-container {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, #4F46E5, #7C3AED);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #1D4D60;
+}
+
+.playful-heading {
+  font-family: 'Nunito', sans-serif;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.leaderboards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.leaderboard-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.leaderboard-card {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  transition: var(--transition);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaderboard-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-accent);
+}
+
+.card-icon-container {
+  width: 72px;
+  height: 72px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #F3F4F6;
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.leaderboard-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.leaderboard-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.rank-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--card-accent) !important; /* Ensures background stays the same */
+  color: #000000 !important; /* Pure black with !important to force override */
+  padding: 0.5rem 2.0rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700; /* Made slightly bolder */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-shadow: none; /* Ensures no text shadow affects visibility */
+}
+
+.dynamic-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+  
+  .leaderboards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 2rem 1rem;
+  }
+  
+  .home-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .leaderboards-grid {
+    grid-template-columns: 1fr;
+  }
+}

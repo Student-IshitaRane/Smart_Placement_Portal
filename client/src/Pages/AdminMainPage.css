@@ -1,0 +1,279 @@
+/* AdminMainPage.css */
+:root {
+  --primary-color: #6c63ff;
+  --primary-light: #e0deff;
+  --primary-pastel: #f0efff;
+  --secondary-color: #4dabf7;
+  --secondary-pastel: #e7f5ff;
+  --success-color: #51cf66;
+  --success-pastel: #ebfbee;
+  --warning-color: #fcc419;
+  --warning-pastel: #fff9db;
+  --danger-color: #ff6b6b;
+  --danger-pastel: #fff5f5;
+  --text-dark: #2b2d42;
+  --text-medium: #4a4e69;
+  --text-light: #8e9aaf;
+  --bg-light: #f8f9fa;
+  --bg-pastel: #b79fb6
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-medium);
+  background-color: var(--bg-pastel); 
+  line-height: 1.5;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-header {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.admin-account {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.account-name {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+.account-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome-section {
+  margin-bottom: 2rem;
+}
+
+.welcome-section h2 {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-message {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+/* Perfectly balanced pastels - noticeable but not distracting */
+.dashboard-card-analytics {
+  background-color: #d4e7ff; /* Friendly blue (like a light denim) */
+}
+
+.dashboard-card-applications {
+  background-color: #d8f5e4; /* Refreshing mint (like sea glass) */
+}
+
+.dashboard-card-companies {
+  background-color: #ffedd5; /* Warm peach (like morning sunlight) */
+}
+
+.dashboard-card-add {
+  background-color: #ffdfe5; /* Soft rose (like cotton candy) */
+}
+
+/* Protects your beautiful hover effect */
+.dashboard-card:hover {
+  background-color: white;
+}
+
+.highlight-card {
+  border-left: 4px solid var(--primary-color);
+  background-color: var(--primary-pastel);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-icon {
+  background-color: var(--secondary-pastel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234dabf7' viewBox='0 0 24 24'%3E%3Cpath d='M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.applications-icon {
+  background-color: var(--success-pastel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2351cf66' viewBox='0 0 24 24'%3E%3Cpath d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z'/%3E%3Cpath d='M7 12h2v5H7zm4-7h2v12h-2zm4 5h2v7h-2z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.companies-icon {
+  background-color: var(--warning-pastel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fcc419' viewBox='0 0 24 24'%3E%3Cpath d='M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.add-icon {
+  background-color: var(--danger-pastel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff6b6b' viewBox='0 0 24 24'%3E%3Cpath d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dashboard-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.dashboard-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Add this to your CSS */
+.quick-actions {
+  background-color: #e8e4ff; /* Soft periwinkle pastel */
+  border-radius: var(--border-radius); /* 8px - matches your cards */
+  box-shadow: var(--box-shadow); /* 0 4px 6px rgba(0, 0, 0, 0.05) */
+  padding: 1.5rem; /* Same padding as dashboard cards */
+  transition: var(--transition); /* Smooth hover effect */
+}
+
+/* Optional: Match the hover effect of other cards */
+.quick-actions:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+
+
+.quick-actions h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--bg-light);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--text-medium);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.action-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 1.5rem;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 1rem;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .action-btn {
+    width: 100%;
+  }
+}

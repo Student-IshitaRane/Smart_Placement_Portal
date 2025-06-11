@@ -1,0 +1,234 @@
+/* Google/Material Design Inspired Styles */
+:root {
+  --primary-color: #4285F4;
+  --text-primary: #202124;
+  --text-secondary: #5F6368;
+  --border-color: #DADCE0;
+  --hover-bg: #F1F3F4;
+  --accepted-color: #34A853;
+  --rejected-color: #EA4335;
+  --applied-color: #FBBC05;
+  --interview-color: #4285F4;
+}
+
+.enterprise-container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 24px;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+.enterprise-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.enterprise-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.enterprise-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.enterprise-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.search-control, .filter-control {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 48px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-control input, .filter-control select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  margin-left: 8px;
+  background: transparent;
+}
+
+.search-icon, .filter-icon {
+  color: var(--text-secondary);
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.enterprise-table-container {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.enterprise-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.enterprise-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: #F8F9FA;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.enterprise-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.enterprise-table tr:last-child td {
+  border-bottom: none;
+}
+
+.enterprise-table tr:hover {
+  background: #FAFAFA; /* Very subtle pastel gray */
+}
+.company-cell, .date-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.company-icon, .date-icon {
+  color: var(--text-secondary);
+  width: 18px;
+  height: 18px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Update these in your CSS */
+.status-applied {
+  background: #FFF3E0; /* Pastel orange */
+  color: #E65100;
+}
+
+.status-interview {
+  background: #E3F2FD; /* Pastel blue */
+  color: #0D47A1;
+}
+
+.status-accepted {
+  background: #E8F5E9; /* Pastel green */
+  color: #1B5E20;
+}
+
+.status-rejected {
+  background: #FFEBEE; /* Pastel pink */
+  color: #C62828;
+}
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.action-button:hover {
+  background: #F1F3F4;
+}
+
+.enterprise-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  border: 3px solid #E0E0E0;
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+.enterprise-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  text-align: center;
+}
+
+.empty-illustration {
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+
+.enterprise-empty h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.enterprise-empty p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enterprise-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .enterprise-controls {
+    flex-direction: column;
+  }
+  
+  .search-control, .filter-control {
+    width: 100%;
+  }
+}

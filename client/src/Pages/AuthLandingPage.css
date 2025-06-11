@@ -1,0 +1,197 @@
+/* Main Container */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Left Side - Image Background Section */
+.auth-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Text Content Overlay */
+.welcome-content {
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  max-width: 80%;
+}
+
+.welcome-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 3;
+  color: #fff;
+
+}
+
+/* Right Side - Login Form */
+.auth-right {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Login Form Styles */
+.login-box {
+  max-width: 350px;
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-box p {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #8b5cf6;
+  outline: none;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #8b5cf6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: #7c3aed;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #7c3aed;
+  transform: translateY(-1px);
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.signup-text a {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.signup-text a:hover {
+  color: #7c3aed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-left,
+  .auth-right {
+    flex: unset;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 0 15px;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}

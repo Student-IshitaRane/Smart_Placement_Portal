@@ -1,0 +1,130 @@
+.register-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #7b2ff7, #fdb99b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.register-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.register-box h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: center;
+}
+
+.register-box p {
+  color: #999;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register-box label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.register-box input:focus {
+  border-color: #8b5cf6;
+  outline: none;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #7c3aed;
+  transform: translateY(-1px);
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+
+.signup-text a {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  color: #7c3aed;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .register-box {
+    padding: 20px;
+  }
+}
+
+/* Dropdown style */
+.dropdown-select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7L10 12L15 7' stroke='%23777777' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.dropdown-select:focus {
+  border-color: #8b5cf6;
+  outline: none;
+}

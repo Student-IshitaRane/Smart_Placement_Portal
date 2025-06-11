@@ -1,0 +1,102 @@
+.register-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom right, #c2e9fb, #a1c4fd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
+  
+  .register-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .register-box h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .register-box p {
+    color: #999;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .register-box label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .register-box input,
+  .register-box select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .register-box input:focus,
+  .register-box select:focus {
+    border-color: #a1c4fd;
+    outline: none;
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #a1c4fd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #a1c4fd;
+    transform: translateY(-1px);
+  }
+  
+  .signup-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+  }
+  
+  .signup-text a {
+    color: #a1c4fd;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .signup-text a:hover {
+    color: #a1c4fd;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 480px) {
+    .register-box {
+      padding: 20px;
+    }
+  }

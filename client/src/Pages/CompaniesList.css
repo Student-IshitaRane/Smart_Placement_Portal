@@ -1,0 +1,269 @@
+.company-list-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #faf5ff;
+  min-height: 100vh;
+}
+
+.header-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 600px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.6rem 1.2rem 0.6rem 2.5rem;
+  border: 1px solid #d3c0d3;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a5c8d;
+}
+
+.view-toggle-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle-container button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #4a3b5a;
+  background-color: #f0e6ff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.view-toggle-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.view-toggle-container button.active {
+  background-color: #c4a1d8;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Card View Styles */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.company-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d3c0d3;
+}
+
+.company-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  color: #4a3b5a;
+}
+
+.basic-info {
+  margin-bottom: 1rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #5a4a6a;
+  flex: 1;
+}
+
+.info-value {
+  flex: 1.5;
+  text-align: right;
+  color: #4a3b5a;
+}
+
+.detailed-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #d3c0d3;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #5a4a6a;
+  flex: 1;
+}
+
+.detail-value {
+  flex: 1.5;
+  text-align: right;
+  color: #4a3b5a;
+}
+
+.eligible-branches {
+  color: #7a5c8d;
+  font-weight: 500;
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.expand-button:hover {
+  color: #7a5c8d;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Table View Styles */
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.companies-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.companies-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  background-color: #4B2777; /* Ensured deep purple background */
+}
+
+.companies-table td {
+  padding: 0.8rem 1.5rem;
+  color: #5a4a6a;
+  border-bottom: 1px solid #e8e0ee;
+}
+
+.companies-table tr:hover {
+  background-color: #dec9e6 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls-row {
+    flex-direction: column;
+  }
+  
+  .search-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .company-card {
+    padding: 1.25rem;
+  }
+  
+  .companies-table {
+    display: block;
+  }
+  
+  .companies-table thead {
+    display: none;
+  }
+  
+  .companies-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .companies-table td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border-bottom: 1px solid #e8e0ee;
+  }
+  
+  .companies-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1.5rem;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: 600;
+    text-align: left;
+    color: #4a3b5a;
+  }
+  
+  .companies-table td:last-child {
+    border-bottom: none;
+  }
+}

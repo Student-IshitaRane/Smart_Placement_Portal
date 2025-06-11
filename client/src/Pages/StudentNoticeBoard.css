@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap');
+
+.noticeboard-container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #f0f7f4 0%, #e0ece7 100%);
+}
+
+.noticeboard-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.noticeboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 1.5rem;
+    color: #2c3e50;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.noticeboard-header-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.noticeboard-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.noticeboard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c704d;
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+.noticeboard-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.noticeboard-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #2c704d;
+}
+
+.empty-notices {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.notices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.notice-item {
+    background: #ffffff;
+    border-left: 4px solid #2c704d;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.notice-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notice-content {
+    color: #2c3e50;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.notice-date {
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .noticeboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 0;
+    }
+
+    .noticeboard-title {
+        font-size: 1.8rem;
+    }
+
+    .noticeboard-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .noticeboard-container {
+        padding: 1rem;
+    }
+
+    .noticeboard-title {
+        font-size: 1.6rem;
+    }
+}

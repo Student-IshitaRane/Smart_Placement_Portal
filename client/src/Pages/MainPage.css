@@ -1,0 +1,153 @@
+/* Base Layout */
+.main-layout {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px; /* Reduced vertical padding */
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 60px; /* Optional fixed height */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin: 0; /* No margin above/below */
+  padding: 0; /* No padding around logo */
+}
+
+.cummins-logo {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+  display: block;
+  margin: 0; /* Remove side margin */
+}
+
+/* Nav links */
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-option {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a237e;
+  text-decoration: none;
+}
+
+.nav-option:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Main Row Layout */
+.main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px;
+  padding-right: 2cm;
+  gap: 40px;
+}
+
+/* Left Section */
+.main-left-inline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-left: 3cm;
+}
+
+.main-left-inline h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.career-text {
+  font-size: 20px;
+  color: #555;
+  margin-top: 0px;
+}
+
+/* Image */
+.main-image-large {
+  width: 420px;
+  height: auto;
+  margin-top: -10px;
+}
+
+/* Feature Grid */
+.right-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 230px);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px 30px;
+  justify-content: end;
+  margin-top: 2cm;
+}
+
+/* Feature Box */
+.feature-box-inline {
+  padding: 20px;
+  height: 100px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-box-inline:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box-inline h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.feature-box-inline p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Notification Badge Styles */
+.nav-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.notification-badge {
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+
+/* If you want the badge to pulse for attention */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.notification-badge {
+  animation: pulse 1.5s infinite;
+}
