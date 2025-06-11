@@ -58,8 +58,6 @@ A centralized MERN-based web platform designed to automate and streamline the ca
 
 ---
 
----
-
 ## ✅ Conclusion
 
 This project transforms outdated Training & Placement operations into a **smart, scalable, and centralized system**, benefitting students, faculty, and recruiters alike.
