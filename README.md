@@ -1,5 +1,8 @@
 # 🎓 Smart Placement Portal
 
+#### [Demo Video](https://drive.google.com/file/d/1uHmCv35u3606O2YyIOyUmHXZNhh3ad4O/view?usp=drive_link)
+#### [Presentation Deck]([https://docs.google.com/presentation/d/1GMKYeq8IKfjteEXGARJtIvp6SaKPjhbr/edit?usp=sharing&ouid=106720804260623378925&rtpof=true&sd=true](https://drive.google.com/file/d/1SakWscDgCB1gy07RaeUXGvgJ6bF6Fpzu/view?usp=drive_link)
+
 ## 🚀 Overview
 A centralized MERN-based web platform designed to automate and streamline the campus placement process. It helps faculty filter students, manage company postings, and send targeted notifications, while also empowering students with real-time updates, a competitive leaderboard, and an opportunity hub.
 
